@@ -1,1 +1,76 @@
-"Hello World"
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="4760 Final Project">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>4760 Final Project</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <!-- <a id="forkme_banner" href="https://github.coecis.cornell.edu/jad452/jad452.github.io">View on GitHub</a> -->
+          <h1 id="project_title">4760 Final Project: Spy Robot</h1>
+          <h2 id="project_tagline"> Raquel Taborga, Jack Defay, Patrick Wilcox </h2>
+          <nav>
+            <table style="width:100%">
+              <tr>
+                <th><a href="index.html">Introduction</a></th>
+                <td><a href="design.html">Design</a></td>
+                <td><a href="software.html">Software</a></td>
+                <td><a href="hardware.html">Hardware</a></td>
+                <td><a href="conclusion.html">Results</a></td>
+                <td><a href="appendix.html">Appendix</a></td>
+              </tr>
+            </table>
+          </nav>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>Introduction</h2>
+        <p>
+          For our final project, we created a spy robot: a robot that uses remote radar sensing to detect intruders. 
+          The physical system consisted of the servo setup we had from lab 4, a time-of-flight distance sensor (discussed in depth below), and the PIC32 microcontroller. 
+          The distance sensor was affixed to the servo setup and the microcontroller controlled the servos so the assembly could pan back and forth to get distance readings over a set range of angles. 
+          Then, this data was stored and sent to the python backend via serial communication to plot the data as a radar map. 
+          The data was sent after every full pan so the radar was updating to reflect the environment it was sensing in real time. 
+          Thus, the user could view this radar map remotely and detect if there were any intruders based on a change in the radar map.
+        </p>
+        <img src="images/intro.png" alt="intro">
+        <p>
+          The motivation for the project was to create an embedded solution to a real-world problem: use the PIC to build a real-time remote surveillance system for users to monitor a room. 
+          As IoT systems have gained popularity, so has the desire to have surveillance systems that can be remotely accessed. 
+          This project explores the implementation of a basic level of this type of system.
+        </p>
+        <p>
+          This project was completed as part of the class <a href="https://people.ece.cornell.edu/land/courses/ece4760/" target="_blank">4760 Designing with Microcontrollers</a>.
+          Our demonstration video can be found <a href="https://www.youtube.com/watch?v=mwJAvcA9KmY&list=PLDqMkB5cbBA7F_Rn8Jfj8CVBKGlAzMNA3&index=9" target="_blank">here</a>.
+        </p>
+        </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <!-- <p class="copyright">Jad452.GitHub.io maintained by <a href="https://github.coecis.cornell.edu/jad452">jad452</a></p> -->
+        <!-- <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p> -->
+        <p>The group approves this report for inclusion on the course website.</p>
+        <p>The group approves the video for inclusion on the course youtube channel.</p>
+        <p>NetID's: rmt229, jad452, prw56</p>
+      </footer>
+    </div>
+
+
+
+  </body>
+</html>
