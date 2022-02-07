@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Fast Robots Website">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Fast Robots Website</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <!-- <a id="forkme_banner" href="https://github.coecis.cornell.edu/jad452/jad452.github.io">View on GitHub</a> -->
+          <h1 id="project_title">ECE 5960: Fast Robots Spring 2022</h1>
+          <h2 id="project_tagline">Raquel Taborga (rmt229)</h2>
+          <nav>
+            <table style="width:100%">
+              <tr>
+                <td><a href="index.html">Introduction</a></th>
+                <th><a href="lab1.html">Lab 1</a></td>
+                <td><a href="lab2.html">Lab 2</a></td>
+              </tr>
+            </table>
+          </nav>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>Introduction</h2>
+        <p>
+          This lab was an introduction to using the Artemis board. I already had the Arduino IDE installed, so I just followed the directions
+          on the course website's <a href="https://cei-lab.github.io/ECE4960-2022/Lab1.html" target="_blank"> Lab 1 page</a> to download
+          a library for the Artemis board. I ran standard blinky code, an Artemis example to test serial connection, and two analog 
+          reading scripts: one for the temperature sensor and the other for the microphone.
+        </p>
+        <p>Here is a video of Arduino's Blink.ino code working</p>
+        <video width="320" height="240" controls>
+            <source src="images/IMG_0802.mov" type="video/mov">
+          Your browser does not support the video tag.
+          </video>
+        <p>Here is an image of my serial output from Example04_Serial.ino from Artemis's examples. </p>
+        <img src="images/serial_working.png" alt="profpic" width="400" height=auto>
+        <p>Here is an image of my serial output from Example02_analogRead.ino from Artemis's examples. This script specified
+        a port for the temperature sensor by using a predefined macro. That's one of the reasons why it was necessary to use 
+        the code from the Artemis library. </p>
+        <img src="images/serial_working.png" alt="profpic" width="400" height=auto>
+        <p>Here is a (possibly loud and certainly annoying) video of me testing the microphone on the Artemis board by
+        running the Example1_MicrophoneOutput.ino script. The serial output shows the highest frequency of the sound byte. </p>
+        <video width="320" height="240" controls>
+            <source src="images/IMG_0804.mov" type="video/mov">
+          Your browser does not support the video tag.
+          </video>
+        </section>
+    </div>
+
+  </body>
+</html>
