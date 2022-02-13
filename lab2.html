@@ -1,1 +1,59 @@
-"Placeholder"
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <h1 id="project_title">Fast Robots Spring 2022</h1>
+          <h2 id="project_tagline"> Lab 2: Bluetooth Module</h2>
+          <nav>
+            <table style="width:100%">
+              <tr>
+                <td><a href="index.html">Introduction</a></th>
+                <td><a href="lab1.html">Lab 1</a></td>
+                <th><a href="lab2.html">Lab 2</a></td>
+              </tr>
+            </table>
+          </nav>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>Introduction</h2>
+        <p>
+          This lab included setting up the bluetooth module on the Artemis board and running it
+          using Jupyter Notebook. 
+        </p>
+        
+        <h2>Setup</h2>
+
+        <h2>Tasks</h2>
+
+        <h3>Echo Command</h3>
+
+        <h3>Sending three floats</h3>
+        <p>Sending three floats to the Artemis board required using the SEND_THREE_FLOATS 
+        commmand. I used the provided SEND_TWO_INTS method as a guide for this function.  
+        </p>
+
+        <h3>Setting up notification handler in Python</h3>
+        <p>The Artemis board is going to send a float value to the computer for processing. 
+        The function notif_handler stores the float as a global variable upon receiving it.
+        I chose to make it a volatile variable, this way as soon as it is updated, the variable
+        is updated in memory. Then when it's necessary to read the variable back, it is fetched
+        from memory so it is always up to date. I'm assuming we don't have to worry about atomicity
+        with this function call. 
+        </p>
+        <h3>The difference between Approach 1 and Approach 2</h3>
+        <p>Approach 1: Receive a float value in Python using receive_float() on a characteristic that is 
+        defined as BLEFloatCharactersitic in the Arduino side </p>
+        <p>Approach 2: Receive a float value in Python using receive_string() (and subsequently converting
+        it to a float type in Python) on a characteristic that is defined as a BLECStringCharacteristic in
+        the Arduino side.</p>
+
+        <h2>5960 Task: Communication Performance Analysis</h2>
+  </body>
+</html>
