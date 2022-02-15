@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <!-- <a id="forkme_banner" href="https://github.coecis.cornell.edu/jad452/jad452.github.io">View on GitHub</a> -->
+          <h1 id="project_title">Fast Robots Spring 2022</h1>
+          <h2 id="project_tagline">Lab 3: Inertial Measurement Unit (IMU) and Time of Flight (TOF) Sensors</h2>
+          <nav>
+            <table style="width:100%">
+              <tr>
+                <td><a href="index.html">Introduction</a></td>
+                <td><a href="lab1.html">Lab 1</a></td>
+                <td><a href="lab2.html">Lab 2</a></td>
+                <th><a href="lab3.html">Lab 3</a></th>
+              </tr>
+            </table>
+          </nav>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>Introduction</h2>
+        <p> This lab is about setting up the Inertial Measurement Unit (IMU) and 
+        Time of Flight (TOF) sensors. 
+        </p>
+        <h2>Prelab</h2>
+        <h3> ToF Sensor Address </h3>
+        <p>The ToF sensor, VL53L1X, has a hardwired address. I chose to
+        programmatically change the address of the sensor upon startup
+        rather than enable two sensors separately through their shutdown pins.
+        This was mostly because I didn't want the hassle of dealing with
+        mutual exclusion. I figured that trying to read from two sensors
+        with the same address at the same time would be a lot like dealing
+        with locks for processes that cannot run simultaneously. In all 
+        honesty, I am just not that good at keeping track of multiple things, 
+        so for me, as the designer and user of this robot, it was easier to 
+        program a separate address for one of the sensors.
+        </p>
+        <p> I understand that a downside is that if there is a power issue, 
+        the sensor address reverts to its default. I hope that is an unlikely
+        event, or at least won't occur while I am using the robot, so I'm 
+        comfortable taking that risk. 
+        </p>
+        <h3>ToF Sensor Placement on Robot and Possible Scenarios</h3>
+        <p> During lecture the day that we discussed this, my friend and I 
+        decided that it would be smart to mount the sensors at the front
+        and back of the car. To me this is kind of like having a reverse camera 
+        in a car, and a person driving it seeing forward.
+        </p>
+        <p> In a scenario where the user wanted to navigate a series of obstacles 
+        in a classroom, or lab, the only visual data that matters is that
+        the car can physically fit in that space. Therefore, a front-mounted 
+        sensor placed at the top rim of the car would guarantee that there is space 
+        in front of the car to move forward, and since the car is so low to the ground, 
+        it is very unlikely that anything below the sensor will be blocking the car's 
+        path. It doesn't matter that we can't sense what's above the car's height, because 
+        it won't hit our car anyway.
+        </p>
+        <p> The sensor in the back would be for maneuvering better. 
+        Just like some cars have a reverse camera, it would be helpful to 
+        have this raw data to know where it is possible to turn and move in 
+        reverse. It would also make it easier to track distances. Imagine 
+        a scenario in which the starting line of the car is in front of a wall 
+        and it has to make it to the other side of the room as fast as possible. 
+        Having a ToF sensor on the back would allow you to track how far you've 
+        traveled, and therefore how much more you have to go. 
+        </p>
+        </section>
+    </div>
+
+  </body>
+</html>
